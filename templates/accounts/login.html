@@ -1,0 +1,8 @@
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+  <h3>Or sign in using:</h3>
+  <a href="{% url 'social:begin' 'twitter_login' %}">Login with Twitter</a>
+</form>

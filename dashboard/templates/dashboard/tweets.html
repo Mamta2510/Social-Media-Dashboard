@@ -1,0 +1,8 @@
+<h2>Your Tweets</h2>
+<ul>
+  {% for tweet in tweets %}
+    <li><strong>{{ tweet.created_at }} — {{ tweet.text }}</li>
+  {% empty %}
+    <li>No tweets found.</li>
+  {% endfor %}
+</ul>
